@@ -23,7 +23,11 @@ The Caucy-Schwarz inequality says that for two vectors $A$ and $B$ in an inner p
 \leq \left\langle A | A \right\rangle \cdot \left\langle B | B \right\rangle \, .
 \end{equation*}
 where here $\left \langle \cdot | \cdot \right \rangle$ means inner product.
-Good news: given two variables $X_1$ and $X_2$, the set of functions over those variables is a vector space, and given a probability distribution over those variables, the average $\avg{f g}$ with respect to that distribution is an inner product on that vector space.
+Good news:
+\begin{itemize}
+\item Given two variables $X_1$ and $X_2$, the set of functions over those variables is a vector space.
+\item Given a probability distribution over those variables, the average $\avg{f g}$ with respect to that distribution, where $f$ and $g$ are functions of those variables) is an inner product on that vector space.
+\end{itemize}
 If we define $f(x,y) \equiv x - \avg{X}$ and $g(x,y) \equiv y - \avg{Y}$, then we have
 \begin{equation*}
 \left \lvert \braket{f}{g} \right \rvert^2
@@ -55,3 +59,16 @@ Renaming $X \rightarrow X_i$ and $Y \rightarrow X_j$ we get\
 \leq 1
 \end{equation*}
 which proves the first part of the problem.
+
+I think it's reasonably clear that in order to saturate the inequality of the Cauchy-Schwarz inequality, the two vectors in question have to be parallel, meaning that
+\begin{equation*}
+\ket{f} = a \ket{g}
+\end{equation*}
+for some scalar $a$.
+In the present case, that would mean
+\begin{equation*}
+x - \avg{X} = a (y - \avg{Y}) \longrightarrow x = ay + a \left( \avg{x} - \avg{Y} \right) \, .
+\end{equation*}
+This proves that $x$ and $y$ are linearly related.
+I'm not really sure what this means though.
+To say that $X$ and $Y$ are linearly related seems to be a statement about the probability distribution itself, but I'm not sure yet how to think about what that means.
