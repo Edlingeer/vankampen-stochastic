@@ -17,17 +17,17 @@ In the book, the correlation is defined as
 
 \levelstay{Solution}
 
-The Caucy-Schwarz inequality says that for two vectors $A$ and $B$ in an inner product space,
+The Cauchy-Schwarz inequality says that for two vectors $A$ and $B$ in an inner product space,
 \begin{equation*}
 \left\lvert \left \langle A | B \right \rangle \right\vert ^2
 \leq \left\langle A | A \right\rangle \cdot \left\langle B | B \right\rangle \, .
 \end{equation*}
 where here $\left \langle \cdot | \cdot \right \rangle$ means inner product.
-Good news:
-\begin{itemize}
-\item Given two variables $X_1$ and $X_2$, the set of functions over those variables is a vector space.
-\item Given a probability distribution over those variables, the average $\avg{f g}$ with respect to that distribution, where $f$ and $g$ are functions of those variables) is an inner product on that vector space.
-\end{itemize}
+Fortunately, given two variables $X$ and $Y$, the set of functions over those variables is a vector space.
+Also, given a probability distribution $P_{X,Y}$ over those variables, the average \begin{equation*}
+\avg{f g} \equiv \int P_{X,Y}(x, y) f(x, y) \, g(x, y) \, dx \, dy
+\end{equation*}
+is an inner product on that vector space.
 If we define $f(x,y) \equiv x - \avg{X}$ and $g(x,y) \equiv y - \avg{Y}$, then we have
 \begin{equation*}
 \left \lvert \braket{f}{g} \right \rvert^2
